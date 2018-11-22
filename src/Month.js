@@ -148,7 +148,7 @@ class MonthView extends React.Component {
       getters,
     } = this.props
 
-    const { needLimitMeasure, rowLimit } = this.state
+    const { needLimitMeasure } = this.state
 
     events = eventsForWeek(events, week[0], week[week.length - 1], accessors)
 
@@ -164,7 +164,7 @@ class MonthView extends React.Component {
         date={date}
         range={week}
         events={events}
-        maxRows={rowLimit}
+        maxRows={20}
         selected={selected}
         selectable={selectable}
         components={components}
